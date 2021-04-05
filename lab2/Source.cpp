@@ -24,11 +24,11 @@ public:
 
 class Vehicle {
 protected:
+	std::string name;
+public:
 	static int count;
 	static Node* head;
 	static Node* tail;
-	std::string name;
-public:
 	Vehicle(std::string name) {
 		this->name = name;
 		Add();
@@ -42,6 +42,7 @@ public:
 		else {
 			tail->SetNext(new Node(*this));
 			tail = tail->GetNext();
+			++count;
 		}
 	}
 
@@ -79,9 +80,9 @@ public:
 };
 
 int main() {
-	Vehicle::Print();
 	Car obj("test");
 	obj.Add();
+	Car obj2("test2");
 	Vehicle::Print();
 	return 0;
 }
