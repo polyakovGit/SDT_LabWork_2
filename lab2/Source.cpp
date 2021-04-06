@@ -37,8 +37,9 @@ public:
 		while (head) {
 			Node* temp = head;
 			head = head->GetNext();
-			temp->GetVehicle().Show();
+			--count;
 			delete temp;
+			std::cout << '\n' << Vehicle::count;
 		}
 	}
 	void Add() {
@@ -118,11 +119,11 @@ public:
 int main() {
 	//Car obj0("test0", "eng0");
 	//obj0.Add();
-	Car obj1("test1", "eng1");
+	//Car obj1("test1", "eng1");
 	Train obj2("test2", 15);
 	//obj2.Add();
-	Express obj3("Test3", 20, 400);
+	Express* obj3=new Express("Test3", 20, 400);
 	//Car obj4("test4", "eng4");
-	//Vehicle::Print();
+	Vehicle::Print();
 	return 0;
 }
