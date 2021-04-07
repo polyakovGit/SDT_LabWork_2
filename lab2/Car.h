@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include "Vehicle.h"
 
 class Car : public Vehicle {

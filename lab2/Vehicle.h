@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 
 class Vehicle;
@@ -21,8 +22,8 @@ protected:
 	std::string name;
 public:
 	static int count;
-	static Node* head;
-	static Node* tail;
+	static Node* begin;
+	static Node* end;
 	Vehicle(std::string name);
 	virtual ~Vehicle();
 
